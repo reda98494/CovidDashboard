@@ -1,21 +1,5 @@
 {% extends './main.html'%}
 {% block content %}
-    <div class="py-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <canvas id="chart"></canvas>
-                    </div>
-                </div>
-            </div>
-    </div>
-
-
-
-
-
-
-
      <div class="py-5">
         <div class="container">
             <div class="row">
@@ -28,7 +12,7 @@
                         <table class="table" data-toggle="table" data-pagination="true" data-search="true">
                             <thead>
                                 <tr>
-                                    <th data-field="region" data-sortable="true" >Règion</th>
+
                                     <th data-field="age" data-sortable="true">Classe d'âge</th>
                                     <th data-field="jour" data-sortable="true">Jour</th>
                                     <th data-field="hosp" data-sortable="true">N° hospitalisé</th>
@@ -41,7 +25,7 @@
                             <tbody>
                                 {% for data in datas %}
                                     <tr>
-                                        <td>{{ data.reg }} </a></td>
+
                                         <td> {{ data.cl_age90 }} </td>
                                         <td> {{ data.jour }} </td>
                                         <td> {{ data.hosp }}  </td>
