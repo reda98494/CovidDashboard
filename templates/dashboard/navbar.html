@@ -1,0 +1,30 @@
+{% load static %}
+<style>
+    .hello-msg{
+        font-size: 28px;
+        color: white;
+        margin-right: 20px;
+    }
+</style>
+<!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+{#        <img src="{% static 'images/LogoBPCompany.png' %}" style="width: 5%">#}
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'listhosp'  %}">Acceuil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'affichedash' %}">Total des victimes du covid</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'affichedashmoy' %}">Moyenne Totale</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+<!--Navbar-->

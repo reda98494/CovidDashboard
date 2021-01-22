@@ -1,0 +1,104 @@
+{% extends './main.html'%}
+{% block content %}
+    <div class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <canvas id="chart1"></canvas>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <canvas id="chart2"></canvas>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+     </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
+<script>
+    // d3.csv('https://www.data.gouv.fr/fr/datasets/r/08c18e08-6780-452d-9b8c-ae244ad529b3')
+    //     .then(makeChart);
+    //
+    // function makeChart(regions) {
+    //     // players is an array of objects where each object represents a player
+    //     var agesLabel = regions.map(function(d) {
+    //         return d.jour
+    //     });
+    //
+    //
+    //     var reaData = regions.map(function(d) {
+    //       return d.cl_age90
+    //     });
+    //     console.log(reaData)
+
+        var chart = new Chart('chart1', {
+            type: 'bar',
+            data: {
+                labels: [0,9,19,29,39,49,59,69,79,89,90],
+                datasets: [
+                    {
+                        label : "Nombre de décès par class d'âge",
+                        data: [7121268,876,1162,7443,29990,83167,299416,807349,1585528,2708743,1556898]
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                title: {
+                    display: true,
+                    text: "Décès par classe d'âge"
+                }
+            }
+        });
+
+    var chart = new Chart('chart2', {
+        type: 'line',
+        data: {
+            labels: [1,2,3,4,6,11,24,27,28,32,44,52,53,75,76,84,93,94],
+            datasets: [
+                {
+                    label : "Nombre de décès par région",
+                    data: [169,44,72,54,44,12897,1525,3077,1730,4978,6730,1565,830,2036,2399,7577,4133,120]
+                }
+            ],
+        },
+        options: {
+            responsive: true,
+            title: {
+                display: true,
+                text: 'Décès par région'
+            }
+        }
+    });
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock%}

@@ -1,0 +1,107 @@
+{% extends './main.html'%}
+{% block content %}
+    <div class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <canvas id="chart"></canvas>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+
+
+
+
+
+
+     <div class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="">
+                    Liste des personnes du Covid-19 depuis mars-2020 {{datas|length}}
+                    </h1>
+
+                    <div class="table-responsive">
+                        <table class="table" data-toggle="table" data-pagination="true" data-search="true">
+                            <thead>
+                                <tr>
+                                    <th data-field="region" data-sortable="true" >Règion</th>
+                                    <th data-field="age" data-sortable="true">Classe d'âge</th>
+                                    <th data-field="jour" data-sortable="true">Jour</th>
+                                    <th data-field="hosp" data-sortable="true">N° hospitalisé</th>
+                                    <th data-field="rea" data-sortable="true">N° en réanimation</th>
+                                    <th data-field="rad" data-sortable="true">N° guéris</th>
+                                    <th data-field="dc" data-sortable="true">N° décès</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for data in datas %}
+                                    <tr>
+                                        <td>{{ data.reg }} </a></td>
+                                        <td> {{ data.cl_age90 }} </td>
+                                        <td> {{ data.jour }} </td>
+                                        <td> {{ data.hosp }}  </td>
+                                        <td> {{ data.rea }}  </td>
+                                        <td> {{ data.rad }}  </td>
+                                        <td> {{ data.dc }}  </td>
+
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
