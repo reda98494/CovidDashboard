@@ -23,8 +23,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'u2wkpk7#_2k97^#^+ds5fhv+_ibyjkp3*g%=lo%!*o!svt8q9j'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+
+#Mettre debug a false
 DEBUG = False
 
+
+#Pour autoriser tout type de connexions via differents noms de domaines : .net , .com
 ALLOWED_HOSTS = ['*']
 
 
